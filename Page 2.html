@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Page 2</title>
+</head>
+<body class="Name2">
+    <div class="container">
+        <button class="btn" type="submit" onclick="openPopup()">Submit</button>
+        <div class="popup" id="popup">
+            <!-- <img src="nameImg_1.png"> -->
+            <h2>Asiya</h2>
+            <p>You Are Ready For Your Gift🎁</p>
+            <form action="Page 3.html">
+                <button type="submit" class="btn1">Yes</button>
+            </form>
+            <button type="submit" class="btn2" onclick="openPopup2(),closePopup()">No</button>
+        </div>
+        <div class="popup2" id="popup2">
+            <img src="popup_img.png">
+            <h2>Its Your Birthday</h2>
+            <p>You cannot ignore this...!</p>
+            <form action="Page 3.html">
+                <button type="submit" class="btn3">OK</button>
+            </form>
+        </div>
+    </div>
+    <div>
+        <video src="vid_1.mp4" controls autoplay muted loop width="100" height="100" class="vid1"></video>
+    </div>
+    <h1 class="great">🎁Happy Birthday Asiya...!🎉</h1>
+    <div class="typingBox" id="typing-box">
+        <div class="typingText" id="typing-text"></div>
+    </div>
+    <script>
+        // const text = "Happy Birthday my firend! my wishes are alwaywith you Happy Birthday my firend! my wishes are alwaywith you Happy Birthday my firend! my wishes are alwaywith you Happy Birthday my firend! my wishes are alwaywith you Happy Birthday my firend! my wishes are alwaywith you Happy Birthday my firend! my wishes are alwaywith you ";
+        // const typingText = document.getElementById("typing-text");
+        // const typingBox = document.getElementById("typing-box");
+        let popup = document.getElementById("popup");
+        // let i=0;
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+        // function typeWriter(){
+        //     if(i < text.length){
+        //         typingText.innerHTML += text.charAt(i);
+        //         i++;
+        //         setTimeout(typeWriter,50);
+        //         typingBox.style.height = typingText.offsetHeight + 40 + "px";
+        //     }
+        // }
+        // typeWriter();
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = "💕'Happy Birthday!' Today is the one day you’re officially allowed \n \t\t\t    to eat cake for breakfast,\n\n    laugh at your own jokes, and pretend the world revolves\n \t\t  around you (because it kinda does).\n\n May your day be as fabulous as your selfie game and as \n     unforgettable as your last online shopping splurge. \n\n Remember, you're not getting older—you're just increasing \n \t    in value like fine wine… or expired coupons. \n\n \tHave an amazing birthday—you totally deserve it!💕";
+            const typingText = document.getElementById("typing-text");
+            const typingBox = document.getElementById("typing-box");
+            
+            if (!typingText || !typingBox) {
+                console.error("Error: Could not find HTML elements!");
+                return;
+            }
+
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    typingText.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                    
+                    // Auto-expand box
+                    typingBox.style.height = typingText.offsetHeight + 40 + "px";
+                }
+            }
+            typeWriter();
+        });
+    </script>
+    <script>
+        let popup2 = document.getElementById("popup2");
+        // let i=0;
+
+        function openPopup2(){
+            popup2.classList.add("open-popup2");
+        }
+        function closePopup2(){
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
+</html>

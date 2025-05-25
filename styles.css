@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  perspective: 1000px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 30s linear infinite;
+}
+
+.carousel img {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  object-fit: cover;
+  transform-origin: center center;
+  left: 90px;
+  top: 100px;
+}
+
+.carousel img:nth-child(1) { transform: rotateY(0deg) translateZ(500px); }
+.carousel img:nth-child(2) { transform: rotateY(45deg) translateZ(500px); }
+.carousel img:nth-child(3) { transform: rotateY(90deg) translateZ(500px); }
+.carousel img:nth-child(4) { transform: rotateY(135deg) translateZ(500px); }
+.carousel img:nth-child(5) { transform: rotateY(180deg) translateZ(500px); }
+.carousel img:nth-child(6) { transform: rotateY(225deg) translateZ(500px); }
+.carousel img:nth-child(7) { transform: rotateY(270deg) translateZ(500px); }
+.carousel img:nth-child(8) { transform: rotateY(315deg) translateZ(500px); }
+
+@keyframes rotate {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+.center-text {
+  color: #c9a6b9;
+  font-size: 2em;
+  border-radius: 25%;
+  margin-top: 60px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#bg-video{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
