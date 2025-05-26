@@ -2,18 +2,22 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: sans-serif;
+  background-image: url("BG.jpg");
+  background-size: cover;
+  background-position: center;
+  size:20%;
 }
 
-.wrapper {
+/* .wrapper {
   perspective: 1000px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.carousel {
+/* .carousel {
   width: 300px;
   height: 300px;
   position: relative;
@@ -53,14 +57,14 @@ body {
   border-radius: 25%;
   margin-top: 60px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+} */
 
 #bg-video{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 40%;
+  height: 80%;
   object-fit: cover;
-  z-index: -1;
+  /* z-index: -1; */
 }
